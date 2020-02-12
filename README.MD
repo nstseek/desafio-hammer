@@ -39,6 +39,6 @@ As únicas coisas que faltaram foi instalar o Swagger e salvar o formulário.
 
 http://18.229.191.97/tabela - Geração de tabelas utilizando a API do back-end.
 
-http://18.229.191.97/ng/formulario - Geração de formulário utilizando a API do back-end.
+http://18.229.191.97/formulario - Geração de formulário utilizando a API do back-end.
 
 Agradeço a oportunidade de participar da seleção, sempre me diverto com esse tipo de desafios.
