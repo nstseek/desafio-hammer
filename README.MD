@@ -25,7 +25,7 @@ Essa foi a parte em que eu mais me engajei por considerar ser mais difícil. Gos
 
 Ele está hospedado no meu VPS na Linode e possui os seguintes métodos:
 
-https://alcos.me/TesteHammer/ci/v1/tabela - Gera os dados aleatórios para montar a tabela no front-end.
+https://alcos.me/TesteHammer/ci/api/v1/tabela - Gera os dados aleatórios para montar a tabela no front-end.
 
 https://alcos.me/TesteHammer/ci/api/v1/formulario - Gera os dados aleatórios para montar o formulário no front-end.
 
