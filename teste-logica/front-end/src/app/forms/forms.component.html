@@ -1,0 +1,16 @@
+<form>
+	<ng-template ngFor let-field [ngForOf]="formData" let-i="i">
+		<div>
+			<label>{{field.nome}}</label>
+			<ng-container [ngSwitch]="field.campo">
+				<input *ngSwitchCase="'text'" name="{{field.nome}}" type="text">
+				<input *ngSwitchCase="'numeric'" name="{{field.nome}}" type="number">
+				<input *ngSwitchCase="'file'" name="{{field.nome}}" type="file">
+				<select *ngSwitchCase="'select'" name="{{field.nome}}">
+					<option *ngFor="let option of field.valores" value="{{option}}">{{option}}</option>
+				</select>
+			</ng-container>
+		</div>
+
+	</ng-template>
+</form>

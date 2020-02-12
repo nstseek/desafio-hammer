@@ -1,35 +1,33 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
-const appRoutes: Routes = [ 
-	{
-		path: "tabela",
-		component: TabelaComponent
-	},
-	{
-		path: "formulario",
-		component: Formulario
-	}
-];
+import { AppComponent } from './app.component';
+import { TableComponent } from './table/table.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TableComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-	RouterModule.forRoot(
-		appRoutes,
-		{ enableTracing: true }
-	)
+	HttpClientModule,
+	RouterModule.forRoot([
+		{
+			path: "tabela",
+			component: TableComponent
+		},
+		{
+			path: "formulario",
+			component: FormsComponent
+		}
+	])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
