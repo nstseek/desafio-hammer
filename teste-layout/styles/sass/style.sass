@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap')
+
+$fontStack: Lato, sans-serif
+$primaryBgColor: #000
+$primaryTxtColor: #fff
+
+body
+	background: $primaryBgColor
+	margin: 0
+	min-height: 420px
+	min-width: 1366px
+	overflow: auto
+	padding: 0
+
+	#display
+		background: $primaryBgColor
+		color: $primaryTxtColor
+		font: 100% $fontStack
+		left: 0
+		height: 420px
+		position: fixed
+		top: 0
+		width: 1366px
+		z-index: 1
+
+	.icon
+		background-image: url(../../images/icon-map.png)
+		display: inline-block
+		height: 32px
+		vertical-align: middle
+		width: 32px
+
+		&.road
+			background-position: 0px 0px
+
+		&.compass-arrow
+			background-position: 32px 0px
+
+		&.seat
+			background-position: 32px -32px
+
+		&.seat-belt
+			background-position: 0px 32px
+
+		&.gas-pump
+			background-position: 0px -32px
+
+		&.park-break
+			background-position: 32px 32px
+
+	.left
+		clear: left
+		float: left
+
+	.right
+		clear: right
+		float: right
+
+	.meter
+		background: #2c2a35
+		border-radius: 418px
+		display: inline-block
+		height: 410px
+		overflow: hidden
+		padding: 4px
+		width: 410px
+		z-index: 2
+
+		ul
+			border-radius: 410px
+			background: #000
+			display: block
+			height: 410px
+			margin: 0
+			padding: 0
+			position: relative
+			width: 410px
+			z-index: 4
+
+
+			li
+				font-weight: 500
+				font-size: 25px
+				list-style: none
+				position: absolute
+				width: 60px
+
+
+				.dot
+					background: #fff
+					border-radius: 5px
+					height: 5px
+					position: absolute
+					width: 5px
+
+				&:nth-child(1)
+					margin-left: 14%
+					margin-top: 76%
+
+				&:nth-child(2)
+					font-size: 13px
+					margin-left: 9%
+					margin-top: 69%
+
+				&:nth-child(3)
+					margin-left: 1.6%
+					margin-top: 42.3%
+
+					.dot
+						margin-left: -8%
+						margin-top: 19%
+
+				&:nth-child(4)
+					margin-left: 16.8%
+					margin-top: 13.6%
+
+					.dot
+						margin-left: -10%
+						margin-top: 5%
+
+				&:nth-child(5)
+					margin-left: 49.3%
+					margin-top: 2.1%
+
+					.dot
+						margin-left: 8%
+						margin-top: -12%
+
+				&:nth-child(6)
+					margin-left: 82.4%
+					margin-top: 18.5%
+
+					.dot
+						margin-left: 28%
+						margin-top: -8%
+
+				&:nth-child(7)
+					margin-left: 93.5%
+					margin-top: 45.1%
+
+					.dot
+						margin-left: 33%
+						margin-top: 18%
+
+				&:nth-child(8)
+					margin-left: 77%
+					margin-top: 80.8%
+
+					.dot
+						margin-left: 29%
+						margin-top: 38%
+
+		.pointer
+			background: linear-gradient(rgba(0, 0, 0, 0) 10%, #050635 25%, #2951da, #3875eb, #2a91ff 90%, #cffbff)
+			border-radius: 4px
+			height: 209px
+			position: absolute
+			margin-left: 207px
+			top: 209px
+			transform: rotate(90deg)
+			transform-origin: top center
+			width: 4px
+			z-index: 10
+
+		.pointerBorderBlue
+			background: #3d77e7
+			border-radius: 60px
+			height: 182px
+			position: relative
+			margin-left: -5px
+			margin-top: -245px
+			width: 250px
+			z-index: 3
+
+		.pointerBorderRed1
+			background: #d9152c
+			border-radius: 13px
+			height: 250px
+			position: relative
+			margin-left: 337px
+			margin-top: -219px
+			width: 77px
+			z-index: 3
+
+		.innerCircle
+			background: radial-gradient(circle at center, transparent 60%, #17101a 61%, #0b020d 65%, #362934 66%, #0b020d 70%, #332933 72% 100%)
+			border-radius: 300px
+			height: 300px
+			margin-left: 55px
+			top: 55px
+			position: absolute
+			width: 300px
+			z-index: 5
+
+			.core
+				font-size: 60px
+				font-weight: bold
+				margin-top: 127px
+				text-align: center
+				
+				z-index: 11
+
+	#middleArea
+		display: inline-block
+		height: 410px
+		margin-left: -60px
+		margin-top: 20px
+		position: absolute
+		width: 658px
+		z-index: -1
+
+		.top
+			border-bottom: 2px solid #201b2d
+			border-image: linear-gradient(to left, transparent 0% 15%, #201b2d 30% 70%, transparent 85% 100%)
+			border-image-slice: 1
+			clear: both
+			height: 35px
+			width: 658px
+
+		.roadTravel
+			margin-left: 190px
+			margin-top: 165px
+			width: 250px
+
+			.left
+				border-left: 2px solid #201b2d
+				border-image: linear-gradient(to bottom, transparent 0%, #766671 30% 70%)
+				border-image-slice: 1
+				height: 150px
+				transform: rotate(25deg)
+				width: 1px
+				
+
+			.right
+				border-right: 2px solid #201b2d
+				border-image: linear-gradient(to bottom, transparent 0%, #766671 50% 100%)
+				border-image-slice: 1
+				height: 150px
+				transform: rotate(-25deg)
+				width: 1px
+			
+
+		.bottom
+			border-top: 2px solid #201b2d
+			border-image: linear-gradient(to left, transparent 0% 5%, #766671 20% 80%, transparent 95% 100%)
+			border-image-slice: 1
+			clear: both
+			margin-top: 320px
+			padding-top: 10px
+			width: 658px
+
+			.seat-belt
+				margin-left: 100px
+
+			.road
+				margin-left: 200px
+
+	#speedometer
+
+		.pointer
+			transform: rotate(50deg)
+
+		ul
+
+			li
+				&:nth-child(1)
+					margin-left: 14%
+					margin-top: 76%
+
+				&:nth-child(2)
+					font-size: 13px
+					margin-left: 9%
+					margin-top: 72%
+
+				&:nth-child(3)
+					margin-left: 1.8%
+					margin-top: 50.9%
+
+				&:nth-child(4)
+					margin-left: 8.8%
+					margin-top: 23.6%
+
+				&:nth-child(5)
+					margin-left: 28.3%
+					margin-top: 6.1%
+
+				&:nth-child(6)
+					margin-left: 46.3%
+					margin-top: 1.6%
+
+					.dot
+						margin-left: 35%
+
+				&:nth-child(7)
+					margin-left: 68.5%
+					margin-top: 11.3%
+
+					.dot
+						margin-left: 65%
+						margin-top: -9%
+
+				&:nth-child(8)
+					margin-left: 84.3%
+					margin-top: 33.3%
+
+					.dot
+						margin-left: 78%
+						margin-top: -1%
+
+				&:nth-child(9)
+					margin-left: 85.3%
+					margin-top: 62%
+
+					.dot
+						margin-left: 78%
+						margin-top: -1%
+
+				&:nth-child(10)
+					margin-left: 70.1%
+					margin-top: 81.8%
+
+					.dot
+						margin-left: 78%
+						margin-top: 31%
+
+		.innerCircle
+
+			.core
+
+				small
+					display: block
+					font-size: 20px
+
+				.icon
+					position: absolute
+
+					&.gas-pump
+						margin-left: 40px
+						margin-top: 80px
+
+					&.park-break
+						margin-left: 150px
+						margin-top: 90px
+
+
+@keyframes rpmPointer
+	0%
+		transform: rotate(90deg)
+	40%
+		transform: rotate(168deg)
+	50%
+		transform: rotate(150deg)
+	80%
+		transform: rotate(188deg)
+	90%
+		transform: rotate(90deg)
+
+@keyframes rpmPointerBorderBlue
+	0%
+		height: 182px
+		margin-top: -245px
+	40%
+		height: 346px
+		margin-top: -409px
+	50%
+		height: 326px
+		margin-top: -389px
+	80%
+		height: 371px
+		margin-top: -434px
+	90%
+		height: 182px
+		margin-top: -245px
+
+@keyframes speedPointer
+	0%
+		transform: rotate(50deg)
+	25%
+		transform: rotate(120deg)
+	30%
+		transform: rotate(125deg)
+	80%
+		transform: rotate(181deg)
+	90%
+		transform: rotate(50deg)
+
+#tachometer .pointer
+	animation: 8s linear infinite rpmPointer
+
+#tachometer .pointerBorderBlue
+	animation: 8s linear infinite rpmPointerBorderBlue
+
+#speedometer .pointer
+	animation: 8s linear infinite speedPointer

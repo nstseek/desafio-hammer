@@ -1,0 +1,14 @@
+<table>
+	<thead>
+		<tr>
+			<th *ngFor="let th of tableHeaders">{{normalizeCamelCase(th)}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let tr of tableRows">
+			<td *ngFor="let th of tableHeaders">
+				{{tr[th]}}
+			</td>
+		</tr>
+	</tbody>
+</table>
