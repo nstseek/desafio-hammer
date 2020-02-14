@@ -1,0 +1,113 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Giovani Lima",
+    "version": "0.1",
+    "title": "Desafio Hammer",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Tabela e formulário",
+      "description": "Rotas"
+    }
+  ],
+  "paths": {
+    "/tabela": {
+      "get": {
+        "tags": [
+          "Tabela"
+        ],
+        "summary": "Retorna a requisição das tabelas",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/model/tabela"
+            }
+          }
+        }
+      }
+    },
+    "/formulario": {
+      "get": {
+        "tags": [
+          "Formulario"
+        ],
+        "summary": "Retorna a requisição de um formulario pré determinado com propriedades diversas",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/model/formulario"
+            }
+          }
+        }
+      }
+    },
+    "/arquivo": {
+      "get": {
+        "tags": [
+          "Arquivo"
+        ],
+        "summary": "Retorna uma imagem pré determinada do servidor",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/arquivo"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TabelaModel": {
+        "properties": {
+          "user_id": {
+            "type": "int"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "cpf": {
+            "type": "string"
+          },
+          "salario": {
+            "type": "float"
+          }
+        }
+      },
+      "TabelaFormulario": {
+        "properties": {
+          "titulo": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string"
+          },
+          "valor": {
+            "type": "string"
+          },
+          "opcoes": {
+            "properties":{
+              "object":{
+              "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
